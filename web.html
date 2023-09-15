@@ -11,17 +11,49 @@
             color: red;
             background: pink;
         }
+
         .Name {
             font-weight: 90;
             background-color: aquamarine;
         }
+
         #i1 {
             color: brown;
             font-weight: bolder;
         }
-        p{
+
+        p {
             color: red;
             background-color: black;
+        }
+
+        /* Attributes Selectors */
+        a {
+            color: pink;
+        }
+
+        /* Internal links, beginning with "#" */
+        a[href^="#"] {
+            background-color: blue;
+        }
+
+        /* Links with "example" anywhere in the URL */
+        a[href*="example"] {
+            background-color: antiquewhite;
+        }
+        /* Links with "insensitive" anywhere in the URL, regardless of captalization */
+        a[href*="insensitive" i]{
+            color: cyan;
+        }
+
+        /* Links that end in ".org" */
+        a[href$=".org"] {
+        color: red;
+        }
+
+        /* Links that start with "https://" and end in ".org" */
+        a[href^="https://"][href$=".org"]{
+            color: green;
         }
     </style>
 </head>
@@ -29,7 +61,7 @@
 <body>
     <h1 style="color: yellow;">Inline CSS</h1>
 
-    <div class="Name">Using Class <h3>Class Css in h3 attributes</h3> 
+    <div class="Name">Using Class <h3>Class Css in h3 attributes</h3>
         Like as simple
     </div>
 
@@ -40,7 +72,18 @@
         I am a Paragraph
     </p>
 
-    <h1 style="background-color: red;">Attributes Selectors</h1>
+    <h1 style="background-color: brown;">Attributes Selectors</h1>
+
+    <ul>
+        <li><a>Links</a></li>
+        <li><a href="#internal">Internal Links</a></li>
+        <li><a href="http://example.com">Example Links</a></li>
+        <li><a href="#InSensitive">Insensitive internal link</a></li>
+        <li><a href="http://example.org">Example org link</a></li>
+        <li><a href="https://example.org">Example https org link</a></li>
+        <li><a href="http://com.example">Links Example</a></li>
+
+    </ul>
 
 
 </body>
