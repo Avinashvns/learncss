@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parentclass {
+            background-color: khaki;
+            position: relative;
+            width: 300px;
+            height: 300px
+        }
+
+        .login {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .static{
+            position: static;
+            left: 10px;
+            top: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="parentclass">
+        <div class="login">    
+            <label>Name :</label>
+            <input type="text" class="login" style="position: absolute;left: 60px; top: 0%;">
+        </div>
+        <div class="static" >    
+            <label>Email :</label>
+            <input type="email" class="login" style="position: static;left: 60px; top: 0%;">
+        </div>
+        
+    </div>
+</body>
+
+</html>
